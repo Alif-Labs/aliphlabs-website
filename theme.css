@@ -1,0 +1,121 @@
+/* Main theme colors */
+:root {
+    --teal: #005F73;
+    --teal-light: #00748C;
+    --warm-gray: #2C3333;
+    --gold: #FFB100;
+    --gold-light: #FFC233;
+    --bg-light: #F5F5F5;
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-light);
+    color: var(--warm-gray);
+}
+
+/* Navigation */
+.nav-link {
+    color: var(--warm-gray);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--teal);
+}
+
+/* Hero section */
+.hero-bg {
+    background-color: var(--teal);
+    position: relative;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 177, 0, 0.1), transparent);
+    pointer-events: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--teal);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--teal-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--gold);
+    color: var(--warm-gray);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+/* Feature cards */
+.feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--teal);
+    box-shadow: 0 10px 20px rgba(0, 95, 115, 0.1);
+}
+
+.feature-icon {
+    background-color: var(--teal);
+}
+
+/* Form elements */
+input:focus, textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(0, 95, 115, 0.1);
+    outline: none;
+}
+
+/* Team section */
+.team-member {
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    filter: grayscale(20%);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover img {
+    filter: grayscale(0%);
+}
+
+.team-social a {
+    color: var(--teal);
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    color: var(--gold);
+}
+
+/* Footer */
+footer {
+    background-color: var(--warm-gray);
+    color: white;
+}
